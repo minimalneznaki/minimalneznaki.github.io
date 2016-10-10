@@ -1,0 +1,37 @@
+/* 
+    Created on : 2016-04-05, 12:03:15
+    Author     : Wojciech
+*/
+.lazyBG{
+    opacity: 0.3;
+    
+    -webkit-transition: opacity 1s cubic-bezier(0.31, -0.18, 0.52, 1.46);
+       -moz-transition: opacity 1s cubic-bezier(0.31, -0.18, 0.52, 1.46);
+        -ms-transition: opacity 1s cubic-bezier(0.31, -0.18, 0.52, 1.46);
+         -o-transition: opacity 1s cubic-bezier(0.31, -0.18, 0.52, 1.46);
+            transition: opacity 1s cubic-bezier(0.31, -0.18, 0.52, 1.46);
+    
+    &.bgloaded{
+        opacity: 1;
+    }
+}
+.bttrlazyloading-wrapper {
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    width: 100%;
+}
+
+.bttrlazyloading,.bttrlazyloading-clone {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.bttrlazyloading-loaded {
+    background-image: none !important;
+}
+

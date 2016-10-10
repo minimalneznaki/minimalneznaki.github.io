@@ -1,0 +1,23 @@
+/* 
+    Created on : 2016-04-05, 12:00:02
+    Author     : Wojciech
+    USAGE
+
+    @font-face {
+        font-family: 'font_name';
+        src: url('../fonts/font_name.woff2') format('woff2'),
+             url('../fonts/font_name.woff') format('woff'),
+             url('../fonts/font_name.otf') format('opentype');
+        font-weight: normal;
+    }
+
+    OR
+
+    @font-face {
+        font-family: 'font_name';
+        src: url('../fonts/font_name.woff2') format('woff2'),
+             url('../fonts/font_name.woff') format('woff'),
+             url('../fonts/font_name.ttf') format('truetype');
+        font-weight: normal;
+    }
+*/    

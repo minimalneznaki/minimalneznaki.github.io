@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Aleksandra Frankowska"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Pokoje w Laskowej | Nocleg przy stoku</title>
+
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav id="sticky_nav">
+		<ul>
+			<li class="logo"><img src="#"/></li>
+			<li><a href="index.html">Strona głowna</a></li>
+			<li><a href="oferta.html">Oferta</a></li>
+			<li><a href="galeria.html">Galeria</a></li>
+			<li><a href="kontakt.html">Kontakt</a></li>
+			<li class="tel">0048 608 692 723</li>
+		</ul>
+	</nav>
+	<section id="napis">
+		<p class="oferta">OFERTA</p>
+	</section>
+	<section id="offer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>
+						Oddajemy do Państwa dyspozycji noclegi w nowo wybudowanym (2016r) budynku. Oferujemy przytulne i funkcjonalnie urządzone pokoje:
+						2, 3 i 4 osobowe z balkonami i pełnym węzłem sanitarnym, bezpłatny dostęp do internetu(WiFi), kuchnię dla gości z kompletnym wyposażeniem, miejsce do przechowywania sprzetu, bezpłatny, oświetlony parking na terenie posesji, niezależne wejście dla gości.
+						W budynku znajduje się także wypożyczalnia sprzetu.<br /><br />
+						Zapraszamy do zapoznania się z naszą ofertą:<br />
+					</p>
+					<a href="jedno.html">2 OSOBOWY</a>
+					<a href="dwu.html">3 OSOBOWY</a>
+					<a href="trzy.html">4 OSOBOWY</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer style="position:relative;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+		<p class="left" style="text-align:left;">
+			Jadwiga i Jacek Sądel<br />
+			Laskowa 866<br />
+			34-602 Laskowa
+		</p>
+	</div>
+	<div class="col-md-6">
+		<p class="right" style="text-align:right;">
+			SADELJADWIGA@GMAIL.COM<br />
+			0048 608 692 723
+		</p>
+		</div>
+		</div>
+	</div>
+	</footer>
+	<script>
+ function initMap() {
+	 var uluru = {lat: 49.7775081, lng: 20.4204369};
+	 var map = new google.maps.Map(document.getElementById('map'), {
+		 zoom: 15,
+		 center: uluru,
+		 styles:[{"featureType":"all","elementType":"all","stylers":[{"saturation":-100},{"gamma":0.5}]}]
+	 });
+	 var marker = new google.maps.Marker({
+		 position: uluru,
+		 map: map
+	 });
+ }
+</script>
+<!-- BEGIN SKRYPTY -->
+<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjMtohWU9fEoB_WCOUi8Y88CTHA7mAX3E&callback=initMap">
+</script>
+			<!-- BEGIN SKRYPTY -->
+			<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+			<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+			<!-- END SKRYPTY -->
+	</body>
+</html>

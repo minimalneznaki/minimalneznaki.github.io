@@ -1,0 +1,51 @@
+/* 
+    Created on : 2016-04-15, 15:07:47
+    Author     : Wojciech
+*/
+//IMPORTS
+@import "hamburgers/hamburgers";
+@import "apps/outdated-browser";
+@import "apps/bootstrap";
+@import "apps/fancybox";
+@import "apps/swiper";
+@import "apps/animate";
+@import "apps/lazyload";
+@import "apps/wordpress";
+@import "apps/contact-form-7";
+@import "mixins";
+
+//COLORS
+
+//SETTINGS
+$big: 1400px;
+$desktop: 1200px;
+$tablet: 992px;
+$mobile: 768px;
+
+
+//DEFAULTS
+html,body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; padding: 0;
+    font-size: 18px;
+    @include bp-desktop{
+        font-size: 16px;
+    }
+    @include bp-mobile{
+        font-size: 14px;
+    }
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+a,a:hover,a:focus{
+	outline: none;
+    color: inherit;
+}
+.container{
+	position:relative;
+    @include bp-up($big){
+        width: 1370px;
+    }
+}

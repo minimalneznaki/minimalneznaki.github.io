@@ -1,0 +1,141 @@
+/* 
+    Created on : 2016-03-10, 13:07:47
+    Author     : Wojciech
+*/
+//RWD MIXINS
+
+@mixin bp-up($size){
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin bp-big {
+  @media only screen and (max-width: 1399px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin bp-tablet {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin bp-mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin bp-mini {
+  @media only screen and (max-width: 479px) {
+    @content;
+  }
+}
+
+@mixin bp-mobile-tablet {
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin bp-mobile-desktop {
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin bp-tablet-desktop {
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+/* EGZAMPLE
+  @include bp-tablet-desktop {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+*/
+
+@function calculateRem($size) {
+  $remSize: $size / 18px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin line-height($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin bg-gradient($start-colour, $end-colour) {
+    background-color: $start-colour;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($start-colour), to($end-colour));
+    background-image: -webkit-linear-gradient(top, $start-colour, $end-colour);
+    background-image:    -moz-linear-gradient(top, $start-colour, $end-colour);
+    background-image:     -ms-linear-gradient(top, $start-colour, $end-colour);
+    background-image:      -o-linear-gradient(top, $start-colour, $end-colour);
+    background-image:         linear-gradient(top, $start-colour, $end-colour);
+    filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}');
+}
+@mixin bg-opacityColor($color, $opacity: 0.3) {
+    background-color: $color; /* The Fallback */
+    background-color: rgba($color, $opacity);
+}
+
+@mixin flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;    
+}
+
+@mixin flex-wrap{    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -webkit-flex-flow: row wrap;
+}
+
+@mixin flex-item{         
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
